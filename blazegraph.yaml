@@ -1,0 +1,481 @@
+endpoints:
+  virtuoso: "http://localhost:8890/sparql"
+  blazegraph: "http://localhost:9999/sparql"
+graphs:
+  jobrdf:
+    virtuoso: "http://example.com/jobrdf"
+    blazegraph: "http://example.com/jobrdf"
+    hdt: "jobrdf"
+  wdbench:
+    virtuoso: "http://example.com/wdbench"
+    blazegraph: "http://example.com/wdbench"
+    hdt: "wdbench"
+  wdbench-ppaths:
+    virtuoso: "http://example.com/wdbench"
+    blazegraph: "http://example.com/wdbench"
+    hdt: "wdbench"
+  test:
+    virtuoso: "http://example.com/watdiv10M"
+    blazegraph: "http://example.com/watdiv10M"
+    hdt: "watdiv10M"
+experiments:
+  xp1:
+    estimator: "baseline"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+  xp1-1:
+    estimator: "baseline"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+  xp1-2:
+    estimator: "baseline"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+
+  xp2-0:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 1000
+    max_depth: 5
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp2-1:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 1000
+    max_depth: 5
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp2-2:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 1000
+    max_depth: 5
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp2-3:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 1000
+    max_depth: 5
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp2-4:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 1000
+    max_depth: 5
+    relaxe_stars: true
+    optimize_walk_plans: true
+  
+  xp3-0:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 1000
+    max_depth: 3
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp3-1:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 1000
+    max_depth: 3
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp3-2:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 1000
+    max_depth: 3
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp3-3:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 1000
+    max_depth: 3
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp3-4:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 1000
+    max_depth: 3
+    relaxe_stars: true
+    optimize_walk_plans: true
+    
+  xp4-0:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 1000
+    max_depth: 1
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp4-1:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 1000
+    max_depth: 1
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp4-2:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 1000
+    max_depth: 1
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp4-3:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 1000
+    max_depth: 1
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp4-4:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 1000
+    max_depth: 1
+    relaxe_stars: true
+    optimize_walk_plans: true
+    
+  xp5-0:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 10000
+    max_depth: 5
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp5-1:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 10000
+    max_depth: 5
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp5-2:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 10000
+    max_depth: 5
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp5-3:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 10000
+    max_depth: 5
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp5-4:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 10000
+    max_depth: 5
+    relaxe_stars: true
+    optimize_walk_plans: true
+    
+  xp6-0:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 10000
+    max_depth: 3
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp6-1:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 10000
+    max_depth: 3
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp6-2:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 10000
+    max_depth: 3
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp6-3:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 10000
+    max_depth: 3
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp6-4:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 10000
+    max_depth: 3
+    relaxe_stars: true
+    optimize_walk_plans: true
+    
+  xp7-0:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 10000
+    max_depth: 1
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp7-1:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 10000
+    max_depth: 1
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp7-2:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 10000
+    max_depth: 1
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp7-3:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 10000
+    max_depth: 1
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp7-4:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 10000
+    max_depth: 1
+    relaxe_stars: true
+    optimize_walk_plans: true
+    
+  xp8-0:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 1000
+    max_depth: 10
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp8-1:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 1000
+    max_depth: 10
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp8-2:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 1000
+    max_depth: 10
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp8-3:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 1000
+    max_depth: 10
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp8-4:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 1000
+    max_depth: 10
+    relaxe_stars: true
+    optimize_walk_plans: true
+    
+  xp9-0:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 10000
+    max_depth: 10
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp9-1:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 10000
+    max_depth: 10
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp9-2:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 10000
+    max_depth: 10
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp9-3:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 10000
+    max_depth: 10
+    relaxe_stars: true
+    optimize_walk_plans: true
+  xp9-4:
+    optimizer: "dp"
+    estimator: "random-walks"
+    workload: "wdbench-ppaths"
+    endpoint: "blazegraph"
+    beam_size: 1
+    beam_extra: 1
+    num_walks: 10000
+    max_depth: 10
+    relaxe_stars: true
+    optimize_walk_plans: true

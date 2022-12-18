@@ -1,0 +1,24 @@
+name: xp
+
+channels:
+  - default
+  - conda-forge
+
+dependencies:
+  - python=3.9.7
+  - seaborn
+  - numpy
+  - matplotlib
+  - coloredlogs
+  - SPARQLWrapper
+  - pyparsing=2.4.7
+  - notebook
+  - click
+  - pandas
+  - tqdm
+  - setuptools
+  - pip
+  - pip:
+    - snakemake
+    - git+https://github.com/IBCNServices/pyRDF2Vec.git
+    - git+https://github.com/JulienDavat/rdflib.git@6.2.0
