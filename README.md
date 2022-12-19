@@ -17,7 +17,7 @@ To quickly get started, run the following commands on one machine, it will insta
     on your system, you can download it from their [website](https://docs.conda.io/en/latest/miniconda.html).
 
     ```bash
-    git clone ... xp-eswc2023
+    git clone https://github.com/JulienDavat/Join-Ordering-of-SPARQL-Property-Path-Queries.git xp-eswc2023
     cd xp-eswc2023
 
     conda env create -f environment.yml
