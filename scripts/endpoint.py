@@ -90,9 +90,8 @@ class Virtuoso(Endpoint):
 
         projection = set(re.findall('\\?[A-z0-9]+', query))
         triples = query.split(' .\n')
-        if 't_direction 3' in triples[-2]:
+        if 't_direction 1' in triples[-2]:
             s, p, o, option = triples[-2].split(' ', 3)
-            option = option.replace('t_direction 3', 't_direction 1')
             triples[-2] = f'{s} {p} ?v56 {option} .'
             triples[-2] += f'\n\tFILTER (?v56 = {o}) .'
             if p == '<http://www.wikidata.org/prop/direct/P279>':

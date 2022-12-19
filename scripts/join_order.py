@@ -172,35 +172,28 @@ class JoinOrder():
                         patterns.append('\thint:Prior hint:gearing "reverse" .')
                 elif join_order.gearing == 1:
                     if join_order.pattern.object[0] != '?':
-                        # if len(join_order.children) == 0:
-                        #     patterns.append(f'\t{pattern[:-1]}, t_direction 3) .')
-                        # else:
-                        relaxed_pattern = join_order.pattern.relaxe_object()
-                        pattern = relaxed_pattern.stringify(target)
-                        patterns.append(f'\t{pattern[:-1]}, t_direction 1) .')
-                        expr = f'IRI({relaxed_pattern.object}) = <{join_order.pattern.object}>'
-                        patterns.append(f'\tFILTER ({expr}) .')
+                        if len(join_order.children) == 0:
+                            patterns.append(f'\t{pattern[:-1]}, t_direction 1) .')
+                        else:
+                            relaxed = join_order.pattern.relaxe_object()
+                            pattern = relaxed.stringify(target)
+                            patterns.append(f'\t{pattern[:-1]}, t_direction 1) .')
+                            expr = f'IRI({relaxed.object}) = <{join_order.pattern.object}>'
+                            patterns.append(f'\tFILTER ({expr}) .')
                     else:
                         patterns.append(f'\t{pattern[:-1]}, t_direction 1) .')
                 else:
                     if join_order.pattern.subject[0] != '?':
-                        # if len(join_order.children) == 0:
-                        #     patterns.append(f'\t{pattern[:-1]}, t_direction 3) .')
-                        # else:
-                        relaxed_pattern = join_order.pattern.relaxe_subject()
-                        pattern = relaxed_pattern.stringify(target)
-                        patterns.append(f'\t{pattern[:-1]}, t_direction 2) .')
-                        expr = f'IRI({relaxed_pattern.subject}) = <{join_order.pattern.subject}>'
-                        patterns.append(f'\tFILTER ({expr}) .')
+                        if len(join_order.children) == 0:
+                            patterns.append(f'\t{pattern[:-1]}, t_direction 2) .')
+                        else:
+                            relaxed = join_order.pattern.relaxe_subject()
+                            pattern = relaxed.stringify(target)
+                            patterns.append(f'\t{pattern[:-1]}, t_direction 2) .')
+                            expr = f'IRI({relaxed.subject}) = <{join_order.pattern.subject}>'
+                            patterns.append(f'\tFILTER ({expr}) .')
                     else:
                         patterns.append(f'\t{pattern[:-1]}, t_direction 2) .')
-                # else:
-                #     if join_order.gearing == 1:
-                #         patterns.append(f'\t{pattern[:-1]}, t_direction 1) .')
-                #     elif join_order.gearing == 2:
-                #         patterns.append(f'\t{pattern[:-1]}, t_direction 2) .')
-                #     else:
-                #         patterns.append(f'\t{pattern[:-1]}, t_direction 3) .')
             else:
                 patterns.append(f'\t{pattern} .')
         if target == 'blazegraph':
