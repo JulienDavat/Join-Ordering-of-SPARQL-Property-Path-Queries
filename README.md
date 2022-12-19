@@ -78,7 +78,7 @@ To quickly get started, run the following commands on one machine, it will insta
     ```
     
     The configuration file used in our experiments is available in the [config](https://github.com/JulienDavat/Join-Ordering-of-SPARQL-Property-Path-Queries/tree/main/config)
-    directory. You just have to indicate the location of Virtuoso in your system.
+    directory. You just have to indicate the location of Virtuoso on your system.
     The location of Virtuoso must also be reported in the [server.sh](https://github.com/JulienDavat/Join-Ordering-of-SPARQL-Property-Path-Queries/blob/main/server.sh) script. Finally,
     you need to add the *bin* directory of Virtuoso in your *PATH* variable.
     
@@ -133,7 +133,7 @@ To quickly get started, run the following commands on one machine, it will insta
     <summary>Details</summary>
     <br>
 
-    The dataset can be downloaded from [Figshare](https://figshare.com/s/50b7544ad6b1f51de060). If there is any problem, please refer to the
+    The dataset can be downloaded from [Figshare](https://figshare.com/s/50b7544ad6b1f51de060). If there is any problem, please refer to their
     official [github repository](https://github.com/MillenniumDB/WDBench). 
 
     </details>
