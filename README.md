@@ -9,131 +9,134 @@ To quickly get started, run the following commands on one machine, it will insta
 
 1. Clone and install the project
     
-  <details>
-  <summary>Details</summary>
-  
-  We use conda to manage the project dependencies. If conda is not installed
-  on your system, you can download it from their [website](https://docs.conda.io/en/latest/miniconda.html).
+    <details>
+    <summary>Details</summary>
+    <br>
+    
+    We use conda to manage the project dependencies. If conda is not installed
+    on your system, you can download it from their [website](https://docs.conda.io/en/latest/miniconda.html).
 
-  ```bash
-  git clone ... xp-eswc2023
-  cd xp-eswc2023
+    ```bash
+    git clone ... xp-eswc2023
+    cd xp-eswc2023
 
-  conda env create -f environment.yml
-  conda activate xp
-  ```
+    conda env create -f environment.yml
+    conda activate xp
+    ```
 
-  </details>
+    </details>
   
   
 2. Install HDT
     
-  <details>
-  <summary>Details</summary>
-  
-  In this project we use a custom version of HDT that need to be installed on your system.
+    <details>
+    <summary>Details</summary>
+    <br>
+    
+    In this project we use a custom version of HDT that need to be installed on your system.
 
-  ```bash
-  git clone https://github.com/JulienDavat/hdt-bindings.git hdt
-  cd hdt
+    ```bash
+    git clone https://github.com/JulienDavat/hdt-bindings.git hdt
+    cd hdt
 
-  git clone git@github.com:rdfhdt/hdt-cpp.git
-  cd hdt-cpp
-  git checkout tags/v1.3.3 -b master 
-  cd ..
-  
-  python -m pip install .
-  ```
+    git clone git@github.com:rdfhdt/hdt-cpp.git
+    cd hdt-cpp
+    git checkout tags/v1.3.3 -b master 
+    cd ..
+    
+    python -m pip install .
+    ```
 
-  </details>
+    </details>
   
   
 3. Download HDT files
     
-  <details>
-  <summary>Details</summary>
-  
-  Random Walks are performed over HDT. Please download HDT files from this
-  [link](https://drive.google.com/file/d/1QAIKOBn4CMPBiBMoTsiXC6NQTjtJh6VB/view?usp=sharing) into the [data](https://github.com/JulienDavat/Join-Ordering-of-SPARQL-Property-Path-Queries/tree/main/data) directory.
+    <details>
+    <summary>Details</summary>
+    <br>
+    
+    Random Walks are performed over HDT. Please download HDT files from this
+    [link](https://drive.google.com/file/d/1QAIKOBn4CMPBiBMoTsiXC6NQTjtJh6VB/view?usp=sharing) into the [data](https://github.com/JulienDavat/Join-Ordering-of-SPARQL-Property-Path-Queries/tree/main/data) directory.
 
-  </details>
+    </details>
     
     
 4. Install Virtuoso v7.2.7
   
-  <details>
-  <summary>Details</summary>
+    <details>
+    <summary>Details</summary>
 
-  ```bash
-  wget https://github.com/openlink/virtuoso-opensource/releases/download/v7.2.7/virtuoso-opensource-7.2.7.tar.gz
-  tar -zxvf virtuoso-opensource-7.2.7.tar.gz
+    ```bash
+    wget https://github.com/openlink/virtuoso-opensource/releases/download/v7.2.7/virtuoso-opensource-7.2.7.tar.gz
+    tar -zxvf virtuoso-opensource-7.2.7.tar.gz
 
-  cd virtuoso-opensource-7.2.7
-  ./configure
-  make
-  make install
-  ```
-  
-  The configuration file used in our experiments is available in the [config](https://github.com/JulienDavat/Join-Ordering-of-SPARQL-Property-Path-Queries/tree/main/config)
-  directory. You just have to indicate the location of Virtuoso in your system.
-  The location of Virtuoso must also be reported in the [server.sh](https://github.com/JulienDavat/Join-Ordering-of-SPARQL-Property-Path-Queries/blob/main/server.sh) script. Finally,
-  you need to add the *bin* directory of Virtuoso in your *PATH* variable.
-  
-  If everything went well, you should be able to start Virtuoso with the following
-  command:
-  
-  ```bash
-  bash server.sh start virtuoso
-  ```
-  
-  Virtuoso can be stopped using the same command:
-  
-  ```bash
-  bash server.sh stop virtuoso
-  ```
+    cd virtuoso-opensource-7.2.7
+    ./configure
+    make
+    make install
+    ```
+    
+    The configuration file used in our experiments is available in the [config](https://github.com/JulienDavat/Join-Ordering-of-SPARQL-Property-Path-Queries/tree/main/config)
+    directory. You just have to indicate the location of Virtuoso in your system.
+    The location of Virtuoso must also be reported in the [server.sh](https://github.com/JulienDavat/Join-Ordering-of-SPARQL-Property-Path-Queries/blob/main/server.sh) script. Finally,
+    you need to add the *bin* directory of Virtuoso in your *PATH* variable.
+    
+    If everything went well, you should be able to start Virtuoso with the following
+    command:
+    
+    ```bash
+    bash server.sh start virtuoso
+    ```
+    
+    Virtuoso can be stopped using the same command:
+    
+    ```bash
+    bash server.sh stop virtuoso
+    ```
 
-  </details>
+    </details>
   
   
 5. Install BlazeGraph v2.1.6
   
-  <details>
-  <summary>Details</summary>
+    <details>
+    <summary>Details</summary>
 
-  ```bash
-  wget https://github.com/blazegraph/database/releases/download/BLAZEGRAPH_2_1_6_RC/bigdata.jar
-  ```
+    ```bash
+    wget https://github.com/blazegraph/database/releases/download/BLAZEGRAPH_2_1_6_RC/bigdata.jar
+    ```
 
-  The configuration file used in our experiments is available in the [config](https://github.com/JulienDavat/Join-Ordering-of-SPARQL-Property-Path-Queries/tree/main/config)
-  directory. You just have to copy it in the same directory as the .jar file. The
-  location of BlazeGraph must be reported in the [server.sh](https://github.com/JulienDavat/Join-Ordering-of-SPARQL-Property-Path-Queries/blob/main/server.sh) script.
-  
-  If everything went well, you should be able to start BlazeGraph with the following
-  command:
-  
-  ```bash
-  bash server.sh start blazegraph
-  ```
-  
-  BlazeGraph can be stopped using the same command:
-  
-  ```bash
-  bash server.sh stop blazegraph
-  ```
+    The configuration file used in our experiments is available in the [config](https://github.com/JulienDavat/Join-Ordering-of-SPARQL-Property-Path-Queries/tree/main/config)
+    directory. You just have to copy it in the same directory as the .jar file. The
+    location of BlazeGraph must be reported in the [server.sh](https://github.com/JulienDavat/Join-Ordering-of-SPARQL-Property-Path-Queries/blob/main/server.sh) script.
+    
+    If everything went well, you should be able to start BlazeGraph with the following
+    command:
+    
+    ```bash
+    bash server.sh start blazegraph
+    ```
+    
+    BlazeGraph can be stopped using the same command:
+    
+    ```bash
+    bash server.sh stop blazegraph
+    ```
 
-  </details>
+    </details>
   
   
 6. Download the WDBench dataset.
     
-  <details>
-  <summary>Details</summary>
-  <br>
+    <details>
+    <summary>Details</summary>
+    <br>
 
-  The dataset can be downloaded from [Figshare](https://figshare.com/s/50b7544ad6b1f51de060). If there is any problem, please refer to the
-  official [github repository](https://github.com/MillenniumDB/WDBench). 
+    The dataset can be downloaded from [Figshare](https://figshare.com/s/50b7544ad6b1f51de060). If there is any problem, please refer to the
+    official [github repository](https://github.com/MillenniumDB/WDBench). 
 
-  </details>
+    </details>
   
   
 7. Load data into Virtuoso
@@ -156,18 +159,18 @@ To quickly get started, run the following commands on one machine, it will insta
     
 8. Load data into BlazeGraph
 
-  <details>
-  <summary>Details</summary>
-  <br>
-  
-  The WDBench dataset can be loaded into BlazeGraph using the following
-  command. You just have to indicate the location of the .nt file.
+    <details>
+    <summary>Details</summary>
+    <br>
+    
+    The WDBench dataset can be loaded into BlazeGraph using the following
+    command. You just have to indicate the location of the .nt file.
 
-  ```bash
-  java -cp blazegraph.jar com.bigdata.rdf.store.DataLoader -defaultGraph http://example.com/wdbench blazegraph.properties <your file here>
-  ```
+    ```bash
+    java -cp blazegraph.jar com.bigdata.rdf.store.DataLoader -defaultGraph http://example.com/wdbench blazegraph.properties <your file here>
+    ```
 
-  </details>
+    </details>
     
     
 ## Quickstart
