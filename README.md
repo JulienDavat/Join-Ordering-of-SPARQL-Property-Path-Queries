@@ -57,7 +57,7 @@ To quickly get started, run the following commands on one machine, it will insta
     <br>
     
     Random Walks are performed over HDT. Please download HDT files from this
-    [link](https://drive.google.com/file/d/1QAIKOBn4CMPBiBMoTsiXC6NQTjtJh6VB/view?usp=sharing) into the [data](https://github.com/JulienDavat/Join-Ordering-of-SPARQL-Property-Path-Queries/tree/main/data) directory.
+    [link](https://drive.google.com/file/d/1QAIKOBn4CMPBiBMoTsiXC6NQTjtJh6VB/view?usp=sharing) into the [data](https://github.com/JulienDavat/Join-Ordering-of-SPARQL-Property-Path-Queries/tree/main/data) directory. If the *data* directory does not exist, please create it.
 
     </details>
     
